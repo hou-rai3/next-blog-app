@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Winter Blog Studio",
-  description: "Next.js 15 + Route Handlers で作るフルスタックなブログ",
+  title: "Marbling Dev Log",
+  description: "ロボコンmarbling開発記録 - 技術検証、参考事例、実装ログを書き残すブログ",
 };
 
 export default function RootLayout({
@@ -30,7 +30,7 @@ export default function RootLayout({
           <header className="top-nav">
             <div className="brand">
               <span className="brand-dot" aria-hidden />
-              <span>Winter Blog Studio</span>
+              <span>Marbling Dev Log</span>
             </div>
             <nav className="nav-links">
               <Link className="nav-link" href="/">
@@ -53,14 +53,24 @@ export default function RootLayout({
           </footer>
 
           <div className="robot-buddy" aria-hidden>
-            <div className="robot-bubble">新着記事をスキャン中... Ready!</div>
+            <div className="robot-bubble">フィールドをスキャン中...</div>
             <div className="robot-core">
-              <div className="robot-face">
-                <div className="robot-eyes">
-                  <div className="eye" />
-                  <div className="eye" />
+              <div className="robot-body">
+                <div className="robot-face">
+                  <div className="robot-eyes">
+                    <div className="eye" />
+                    <div className="eye" />
+                  </div>
+                  <div className="robot-mouth" />
                 </div>
-                <div className="robot-mouth" />
+              </div>
+              <div className="robot-legs">
+                <div className="robot-leg" />
+                <div className="robot-leg" />
+              </div>
+              <div className="robot-wheels">
+                <div className="wheel" />
+                <div className="wheel" />
               </div>
             </div>
           </div>

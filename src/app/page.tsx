@@ -21,11 +21,11 @@ export default async function Home() {
   return (
     <div className="page-body">
       <section className="hero">
-        <p className="badge">Full-stack Next.js</p>
-        <h1>冬休みの宿題を完走するブログ</h1>
+        <p className="badge">Marbling 2026</p>
+        <h1>ロボコン開発記録</h1>
         <p className="muted">
-          Route Handler で API を作り、同じリポジトリで UI を仕上げる学習用ブログです。投稿はサンプル
-          データベースに保存され、管理画面から編集できます。
+          2026年度に開催されるDISCO ROBOT CONTEST「marbling」の開発過程を記録するブログです。
+          技術検証、参考事例、実装の工夫、トラブルシューティングなどを書き残していきます。
         </p>
         <div className="btn-row" style={{ marginTop: 12 }}>
           <Link className="btn" href="/admin/posts/new">
@@ -38,7 +38,7 @@ export default async function Home() {
       </section>
 
       <section className="stack">
-        <div className="section-title">最新の投稿</div>
+        <div className="section-title">最新の開発記録</div>
         <div className="grid">
           {posts.map((post) => (
             <article key={post.id} className="card">

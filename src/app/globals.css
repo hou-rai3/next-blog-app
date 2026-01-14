@@ -347,20 +347,33 @@ a {
   right: 18px;
   bottom: 22px;
   z-index: 15;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 6px;
   align-items: center;
-  justify-items: center;
+  justify-content: flex-end;
+  width: 100px;
+  height: auto;
 }
 
 .robot-bubble {
   background: rgba(10, 10, 10, 0.95);
   border: 2px solid var(--blue);
   border-radius: 12px;
-  padding: 10px 12px;
+  padding: 8px 10px;
   box-shadow: 0 0 20px rgba(59, 126, 255, 0.5);
-  font-size: 13px;
+  font-size: 12px;
   color: #ffffff;
+  width: 90px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
 }
 
 .robot-core {
@@ -530,5 +543,61 @@ a {
   94% { transform: scaleY(1); }
 }
 
-/* Utility: make images responsive by default */
-img { max-width: 100%; height: auto; display: block; }
+/* Hover animation for robot buddy */
+.robot-bubble-hover {
+  animation: bubblePulse 0.4s ease-out !important;
+}
+
+.robot-core-active {
+  animation: robotWave 0.6s ease-in-out !important;
+}
+
+@keyframes bubblePulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes robotWave {
+  0%, 100% {
+    transform: rotate(-1.5deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(1.5deg);
+  }
+}
+
+/* Robot buddy interactive styling */
+.robot-buddy {
+  cursor: pointer;
+}
+
+.robot-buddy:hover .robot-bubble {
+  border-color: var(--green);
+  box-shadow: 0 0 20px rgba(59, 255, 126, 0.5);
+}
+
+.robot-buddy:hover .robot-body {
+  box-shadow: 0 10px 25px rgba(59, 255, 126, 0.4);
+}
+
+.robot-buddy:hover .wheel {
+  animation-duration: 0.8s;
+  border-color: var(--green);
+  box-shadow: 0 4px 12px rgba(59, 255, 126, 0.6), inset 0 2px 4px rgba(255, 255, 255, 0.2);
+}
+

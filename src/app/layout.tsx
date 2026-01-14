@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import RobotBuddy from "./components/RobotBuddy";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -52,28 +53,7 @@ export default function RootLayout({
             <span>Built with Next.js 15 + Route Handlers</span>
           </footer>
 
-          <div className="robot-buddy" aria-hidden>
-            <div className="robot-bubble">フィールドをスキャン中...</div>
-            <div className="robot-core">
-              <div className="robot-body">
-                <div className="robot-face">
-                  <div className="robot-eyes">
-                    <div className="eye" />
-                    <div className="eye" />
-                  </div>
-                  <div className="robot-mouth" />
-                </div>
-              </div>
-              <div className="robot-legs">
-                <div className="robot-leg" />
-                <div className="robot-leg" />
-              </div>
-              <div className="robot-wheels">
-                <div className="wheel" />
-                <div className="wheel" />
-              </div>
-            </div>
-          </div>
+          <RobotBuddy />
         </div>
       </body>
     </html>

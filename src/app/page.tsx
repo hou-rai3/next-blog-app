@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getBaseUrl } from "@/lib/base-url";
 import type { PostWithCategory } from "@/lib/types";
 
@@ -21,10 +22,18 @@ export default async function Home() {
   return (
     <div className="page-body">
       <section className="hero">
+        <Image 
+          src="/images/marbling-title.png" 
+          alt="Marbling 2026 タイトル" 
+          width={800} 
+          height={200} 
+          priority
+          style={{ width: '100%', height: 'auto', maxWidth: '800px', margin: '0 auto 24px' }}
+        />
         <p className="badge">Marbling 2026</p>
         <h1>ロボコン開発記録</h1>
         <p className="muted">
-          2026年度に開催されるDISCO ROBOT CONTEST「marbling」の開発過程を記録するブログです。
+          DISCO ROBOT CONTEST 2026 「marbling」 の開発過程を記録するブログです。
           技術検証、参考事例、実装の工夫、トラブルシューティングなどを書き残していきます。
         </p>
         <div className="btn-row" style={{ marginTop: 12 }}>

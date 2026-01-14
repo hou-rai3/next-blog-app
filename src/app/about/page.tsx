@@ -26,15 +26,14 @@ export default function AboutPage() {
         <div>
           <h3 className="section-title">技術スタック</h3>
           <ul className="muted" style={{ lineHeight: 1.8 }}>
-            <li>ロボット: 二輪倒立振子機構</li>
-            <li>制御: ESP32 / Arduino / ROS</li>
+            <li>ロボット: 卍太郎</li>
+            <li>制御: ROS2</li>
             <li>ブログ: Next.js 15 + TypeScript</li>
           </ul>
         </div>
         <div>
           <h3 className="section-title">制作者</h3>
           <p className="muted">
-            ロボティクスとソフトウェア開発の両方に取り組む学生エンジニア。
             実機での試行錯誤を通じて学んだことを、後から振り返れるように記録しています。
           </p>
         </div>

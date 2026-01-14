@@ -71,9 +71,9 @@ export default function AdminCategoriesPage() {
             <tbody>
               {categories.map((cat) => (
                 <tr key={cat.id}>
-                  <td>{cat.id}</td>
-                  <td>{cat.name}</td>
-                  <td>{new Date(cat.updatedAt).toLocaleDateString()}</td>
+                  <td data-label="ID">{cat.id}</td>
+                  <td data-label="名前">{cat.name}</td>
+                  <td data-label="更新日">{new Date(cat.updatedAt).toLocaleDateString()}</td>
                   <td>
                     <div className="btn-row">
                       <Link className="btn secondary" href={`/admin/categories/${cat.id}`}>

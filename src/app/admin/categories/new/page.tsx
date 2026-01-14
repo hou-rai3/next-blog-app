@@ -38,7 +38,7 @@ export default function NewCategoryPage() {
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="例: Tech, Life"
+            placeholder="カテゴリ名を入力！"
             required
           />
         </div>

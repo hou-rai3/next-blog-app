@@ -71,9 +71,9 @@ export default function AdminPostsPage() {
             <tbody>
               {posts.map((post) => (
                 <tr key={post.id}>
-                  <td>{post.title}</td>
-                  <td>{post.category?.name ?? "未分類"}</td>
-                  <td>{new Date(post.updatedAt).toLocaleDateString()}</td>
+                  <td data-label="タイトル">{post.title}</td>
+                  <td data-label="カテゴリー">{post.category?.name ?? "未分類"}</td>
+                  <td data-label="更新日">{new Date(post.updatedAt).toLocaleDateString()}</td>
                   <td>
                     <div className="btn-row">
                       <Link className="btn secondary" href={`/posts/${post.id}`}>
